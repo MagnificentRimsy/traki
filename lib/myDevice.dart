@@ -278,9 +278,18 @@ class _myDevicesState extends State<myDevices> {
                                   color: appColor,
                                   borderRadius: BorderRadius.circular(14),
                                 ),
-                                child: Icon(
-                                  Icons.edit,
-                                  color: whiteColor,
+                                child: InkWell(
+                                  onTap: () {
+                                     Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          DeviceDetailsPage()));
+                                  },
+                                                                  child: Icon(
+                                    Icons.edit,
+                                    color: whiteColor,
+                                  ),
                                 ),
                               ),
                             ],
