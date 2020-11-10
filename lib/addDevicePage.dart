@@ -124,27 +124,6 @@ class _AddDevicePageState extends State<AddDevicePage> {
                 SizedBox(
                   height: size.convert(context, 30),
                 ),
-
-                // Below is just a circular Loading Indicator
-                // Container(
-                //         height: 80.0,
-                //         width: 200.0,
-                //         child: Card(
-                //           color: Colors.white,
-                //           child: Column(
-                //             mainAxisAlignment: MainAxisAlignment.center,
-                //             children: <Widget>[
-                //               Text(
-                //                 "Downloading File: $progressString",
-                //                 style: TextStyle(
-                //                   color: Colors.green,
-                //                 ),
-                //               )
-                //             ],
-                //           ),
-                //         ),
-                //       )
-                //     : Container()
               ],
             ),
           ],

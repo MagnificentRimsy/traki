@@ -2,6 +2,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:traki/addGeofence.dart';
 import 'package:traki/addLocation.dart';
 import 'package:traki/myDevice.dart';
 import 'package:traki/profilePage.dart';
@@ -182,14 +183,14 @@ class _homePageState extends State<homePage>
                       type: PageTransitionType.topToBottom));
             },
             child: GestureDetector(
-               onTap: () {
-              Navigator.push(
-                  context,
-                  PageTransition(
-                      child: DetailPage(),
-                      type: PageTransitionType.topToBottom));
-            },
-                          child: Container(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        child: DetailPage(),
+                        type: PageTransitionType.topToBottom));
+              },
+              child: Container(
                 margin:
                     EdgeInsets.symmetric(horizontal: size.convert(context, 26)),
                 child: Row(
@@ -305,32 +306,42 @@ class _homePageState extends State<homePage>
           SizedBox(
             height: size.convert(context, 15),
           ),
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: size.convert(context, 26)),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Image.asset(
-                  "assets/icons/payment.png",
-                  width: size.convert(context, 26),
-                  height: size.convert(context, 26),
-                ),
-                SizedBox(
-                  width: size.convert(context, 18),
-                ),
-                Expanded(
-                  child: Container(
-                    child: RichText(
-                      maxLines: 1,
-                      text: TextSpan(
-                          text: "Payments",
-                          style: fontStyle.GibsonRegular(
-                            color: whiteColor,
-                          )),
-                    ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      child: AddGeofencePage(),
+                      type: PageTransitionType.bottomToTop));
+            },
+            child: Container(
+              margin:
+                  EdgeInsets.symmetric(horizontal: size.convert(context, 26)),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Image.asset(
+                    "assets/icons/payment.png",
+                    width: size.convert(context, 26),
+                    height: size.convert(context, 26),
                   ),
-                )
-              ],
+                  SizedBox(
+                    width: size.convert(context, 18),
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: RichText(
+                        maxLines: 1,
+                        text: TextSpan(
+                            text: "Payments",
+                            style: fontStyle.GibsonRegular(
+                              color: whiteColor,
+                            )),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
           SizedBox(

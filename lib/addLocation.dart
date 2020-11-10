@@ -2,9 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:traki/addLabel.dart';
-import 'package:traki/myDevice.dart';
 import 'package:traki/repeatedWidgets/CustomTextField.dart';
-import 'package:traki/repeatedWidgets/filledButton.dart';
 import 'package:traki/res/color.dart';
 import 'package:traki/res/size.dart';
 
@@ -25,7 +23,7 @@ class _AddLocationPageState extends State<AddLocationPage> {
         elevation: .5,
         title: Center(
             child: Text(
-          'Add Device',
+          'Add Location',
           textAlign: TextAlign.left,
         )),
         backgroundColor: appColor,
