@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:traki/myDevice.dart';
-import 'package:traki/repeatedWidgets/CustomTextField.dart';
-import 'package:traki/repeatedWidgets/filledButton.dart';
 import 'package:traki/res/color.dart';
 import 'package:traki/res/size.dart';
 
-void main() => runApp(AddGeofencePage());
+void main() => runApp(MyLocationsPage());
 
-class AddGeofencePage extends StatefulWidget {
-  AddGeofencePage({Key key}) : super(key: key);
+class MyLocationsPage extends StatefulWidget {
+  MyLocationsPage({Key key}) : super(key: key);
 
   @override
-  _AddGeofencePageState createState() => _AddGeofencePageState();
+  _MyLocationsPageState createState() => _MyLocationsPageState();
 }
 
-class _AddGeofencePageState extends State<AddGeofencePage> {
+class _MyLocationsPageState extends State<MyLocationsPage> {
   String valueChoose;
   List listItem = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
 
@@ -26,7 +22,7 @@ class _AddGeofencePageState extends State<AddGeofencePage> {
         elevation: .5,
         title: Center(
             child: Text(
-          'Add Geofence',
+          'My Locations',
           textAlign: TextAlign.left,
         )),
         backgroundColor: appColor,

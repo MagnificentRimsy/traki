@@ -2,7 +2,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:traki/addGeofence.dart';
+import 'package:traki/myLocations.dart';
 import 'package:traki/addLocation.dart';
 import 'package:traki/myDevice.dart';
 import 'package:traki/profilePage.dart';
@@ -11,7 +11,7 @@ import 'package:traki/res/color.dart';
 import 'package:traki/res/size.dart';
 import 'package:traki/res/style.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:traki/rough.dart';
+import 'package:traki/profilePage.dart';
 
 class homePage extends StatefulWidget {
   @override
@@ -187,8 +187,8 @@ class _homePageState extends State<homePage>
                 Navigator.push(
                     context,
                     PageTransition(
-                        child: DetailPage(),
-                        type: PageTransitionType.topToBottom));
+                        child: ProfilePage(),
+                        type: PageTransitionType.leftToRightWithFade));
               },
               child: Container(
                 margin:
@@ -230,7 +230,7 @@ class _homePageState extends State<homePage>
                   context,
                   PageTransition(
                       child: AddLocationPage(),
-                      type: PageTransitionType.topToBottom));
+                      type: PageTransitionType.leftToRightWithFade));
             },
             child: Container(
               margin:
@@ -271,7 +271,7 @@ class _homePageState extends State<homePage>
                   context,
                   PageTransition(
                       child: myDevices(),
-                      type: PageTransitionType.bottomToTop));
+                      type: PageTransitionType.leftToRightWithFade));
             },
             child: Container(
               margin:
@@ -311,8 +311,8 @@ class _homePageState extends State<homePage>
               Navigator.push(
                   context,
                   PageTransition(
-                      child: AddGeofencePage(),
-                      type: PageTransitionType.bottomToTop));
+                      child: MyLocationsPage(),
+                      type: PageTransitionType.leftToRightWithFade));
             },
             child: Container(
               margin:
