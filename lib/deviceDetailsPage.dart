@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:traki/addGeofence.dart';
 import 'package:traki/myDevice.dart';
 import 'package:traki/repeatedWidgets/filledButton.dart';
 import 'package:traki/res/color.dart';
@@ -268,7 +270,13 @@ class _DeviceDetailsPageState extends State<DeviceDetailsPage> {
                           child: new FloatingActionButton(
                             child: const Icon(Icons.add),
                             backgroundColor: Colors.teal.shade800,
-                            onPressed: () {},
+                            onPressed: () {
+                               Navigator.push(
+                  context,
+                  PageTransition(
+                      child: AddGeofencePage(),
+                      type: PageTransitionType.leftToRightWithFade));
+                            },
                           ),
                         ),
                       ],
