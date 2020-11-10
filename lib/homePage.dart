@@ -118,17 +118,26 @@ class _homePageState extends State<homePage>
                             horizontal: size.convert(context, 24)),
                         child: Row(
                           children: [
-                            Container(
-                              //alignment: Alignment.centerLeft,
-                              height: size.convert(context, 64),
-                              width: size.convert(context, 64),
-                              decoration: BoxDecoration(
-                                  color: appColor.withOpacity(0.99),
-                                  borderRadius: BorderRadius.circular(20)),
-                              child: Container(
-                                child: Image.asset(
-                                  "assets/icons/whiteLogo1.png",
-                                  color: whiteColor,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                    context,
+                    PageTransition(
+                        child: homePage(),
+                        type: PageTransitionType.leftToRightWithFade));
+                              },
+                                                          child: Container(
+                                //alignment: Alignment.centerLeft,
+                                height: size.convert(context, 64),
+                                width: size.convert(context, 64),
+                                decoration: BoxDecoration(
+                                    color: appColor.withOpacity(0.99),
+                                    borderRadius: BorderRadius.circular(20)),
+                                child: Container(
+                                  child: Image.asset(
+                                    "assets/icons/whiteLogo1.png",
+                                    color: whiteColor,
+                                  ),
                                 ),
                               ),
                             ),
